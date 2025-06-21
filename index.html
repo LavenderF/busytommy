@@ -18,7 +18,7 @@
         
         .certificate {
             width: 800px;
-            height: 600px;
+            min-height: 600px;  /* 改为min-height以适应内容 */
             background: linear-gradient(to bottom, #e8f5e9, #b2dfdb);
             border: 15px solid #80deea;
             border-radius: 10px;
@@ -26,7 +26,6 @@
             position: relative;
             box-shadow: 0 10px 30px rgba(0, 150, 136, 0.2);
             text-align: center;
-            overflow: hidden;
             display: flex;
             flex-direction: column;
         }
@@ -44,7 +43,7 @@
         .header {
             font-size: 36px;
             font-weight: bold;
-            margin-bottom: 25px;
+            margin-bottom: 20px;  /* 减少间距 */
             color: #00796b;
             letter-spacing: 2px;
         }
@@ -52,7 +51,7 @@
         .title {
             font-size: 28px;
             font-weight: bold;
-            margin: 20px 0;
+            margin: 15px 0;  /* 减少间距 */
             color: #00897b;
         }
         
@@ -60,7 +59,7 @@
             font-size: 48px;
             font-weight: bold;
             color: #00695c;
-            margin: 20px 0;
+            margin: 15px 0;  /* 减少间距 */
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
             background: linear-gradient(90deg, #4db6ac, #80deea);
             -webkit-background-clip: text;
@@ -80,20 +79,39 @@
             flex-grow: 1;
         }
         
+        .signature-area {
+            margin-top: 30px;  /* 增加签名区上方空间 */
+            padding: 20px 0;   /* 增加签名区内边距 */
+        }
+        
         .signature {
-            margin-top: 20px;
             display: flex;
             justify-content: space-around;
-            padding-bottom: 20px;
+            margin: 0 auto;
+            max-width: 90%;
         }
         
         .signature-box {
             text-align: center;
             background-color: rgba(255, 255, 255, 0.6);
-            padding: 15px 25px;
+            padding: 20px 30px;  /* 增加内边距 */
             border-radius: 8px;
             border-top: 3px solid #80deea;
-            min-width: 200px;
+            min-width: 220px;   /* 增加最小宽度 */
+            margin: 0 15px;      /* 增加盒子间距 */
+        }
+        
+        .signature-line {
+            height: 2px;
+            background: #00796b;
+            margin: 5px 0 15px;
+        }
+        
+        .footer {
+            margin-top: 20px;    /* 增加页脚上方空间 */
+            font-style: italic;
+            color: #00796b;
+            font-size: 14px;
         }
         
         .seal {
@@ -105,16 +123,9 @@
             opacity: 0.9;
         }
         
-        .footer {
-            margin-top: 10px;
-            font-style: italic;
-            color: #00796b;
-            font-size: 14px;
-        }
-        
         .stamp {
             position: absolute;
-            bottom: 120px;
+            bottom: 140px;      /* 上移印章位置 */
             left: 50px;
             transform: rotate(-15deg);
             opacity: 0.8;
@@ -170,7 +181,6 @@
         <div class="corner corner-bl"></div>
         <div class="corner corner-br"></div>
         
-        <!-- 使用您提供的印章图片 -->
         <img src="https://img2.zol.com.cn/product/29_501x2000/781/ceuJVXYITqA7w.gif" alt="印章" class="seal">
         
         <div class="header">世界最忙的人证书</div>
@@ -181,7 +191,7 @@
         
         <div class="content">
             鉴于Thomas Huang先生在其职业生涯中展现出无与伦比的忙碌能力，包括但不限于：<br><br>
-            • 同时处理1439个项目的超人能力<br>
+            • 同时处理1479个项目的超人能力<br>
             • 发明"24小时工作制"并亲自实践<br>
             • 在课间完成3天工作量的惊人效率<br>
             • 将"没时间"发展为一种艺术形式<br>
@@ -189,14 +199,16 @@
             经国际忙碌协会(IMA)全体成员一致认定，授予"世界最忙的人"荣誉称号。
         </div>
         
-        <div class="signature">
-            <div class="signature-box">
-                <div>_________________________</div>
-                <div>国际忙碌协会主席</div>
-            </div>
-            <div class="signature-box">
-                <div>_________________________</div>
-                <div>时间管理不存在的证明人</div>
+        <div class="signature-area">
+            <div class="signature">
+                <div class="signature-box">
+                    <div class="signature-line"></div>
+                    <div>国际忙碌协会主席</div>
+                </div>
+                <div class="signature-box">
+                    <div class="signature-line"></div>
+                    <div>时间管理不存在的证明人</div>
+                </div>
             </div>
         </div>
         
@@ -204,7 +216,6 @@
             证书编号: #BUSY-2025-1202 | 颁发日期: <span id="date"></span>
         </div>
         
-        <!-- 使用您提供的印章图片作为批准印章 -->
         <img src="https://img2.zol.com.cn/product/29_501x2000/781/ceuJVXYITqA7w.gif" alt="批准印章" class="stamp">
     </div>
     
