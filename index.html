@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Huang - 世界最忙的人证书</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .certificate {
+            width: 800px;
+            height: 600px;
+            background: linear-gradient(to bottom, #e8f5e9, #b2dfdb);
+            border: 15px solid #80deea;
+            border-radius: 10px;
+            padding: 40px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 150, 136, 0.2);
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .certificate::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 15px;
+            background: linear-gradient(90deg, #4db6ac, #80deea, #4db6ac);
+        }
+        
+        .header {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: #00796b;
+            letter-spacing: 2px;
+        }
+        
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #00897b;
+        }
+        
+        .name {
+            font-size: 48px;
+            font-weight: bold;
+            color: #00695c;
+            margin: 30px 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(90deg, #4db6ac, #80deea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        
+        .content {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 20px 0;
+            color: #455a64;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #4db6ac;
+        }
+        
+        .signature {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .signature-box {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 15px 25px;
+            border-radius: 8px;
+            border-top: 3px solid #80deea;
+        }
+        
+        .seal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            opacity: 0.7;
+            filter: hue-rotate(160deg);
+        }
+        
+        .footer {
+            margin-top: 30px;
+            font-style: italic;
+            color: #00796b;
+            font-size: 14px;
+        }
+        
+        .stamp {
+            position: absolute;
+            bottom: 40px;
+            left: 50px;
+            transform: rotate(-15deg);
+            opacity: 0.6;
+            width: 120px;
+            filter: hue-rotate(120deg);
+        }
+        
+        .watermark {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 12px;
+            color: rgba(0, 150, 136, 0.3);
+        }
+        
+        .corner {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-color: #80deea;
+            border-style: solid;
+            border-width: 0;
+        }
+        
+        .corner-tl {
+            top: 0;
+            left: 0;
+            border-top-width: 3px;
+            border-left-width: 3px;
+            border-top-left-radius: 10px;
+        }
+        
+        .corner-tr {
+            top: 0;
+            right: 0;
+            border-top-width: 3px;
+            border-right-width: 3px;
+            border-top-right-radius: 10px;
+        }
+        
+        .corner-bl {
+            bottom: 0;
+            left: 0;
+            border-bottom-width: 3px;
+            border-left-width: 3px;
+            border-bottom-left-radius: 10px;
+        }
+        
+        .corner-br {
+            bottom: 0;
+            right: 0;
+            border-bottom-width: 3px;
+            border-right-width: 3px;
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate">
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+        
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Red_seal.svg/1200px-Red_seal.svg.png" alt="印章" class="seal">
+        
+        <div class="header">世界最忙的人证书</div>
+        
+        <div class="title">特此证明</div>
+        
+        <div class="name">Thomas Huang</div>
+        
+        <div class="content">
+            鉴于Thomas Huang先生在其职业生涯中展现出无与伦比的忙碌能力，包括但不限于：<br><br>
+            • 同时处理47个项目的超人能力<br>
+            • 发明"24小时工作制"并亲自实践<br>
+            • 在课间完成3天工作量的惊人效率<br>
+            • 将"没时间"发展为一种艺术形式<br>
+            • 创造了"咖啡代替睡眠"的科学理论<br><br>
+            经国际忙碌协会(IMA)全体成员一致认定，授予"世界最忙的人"荣誉称号。
+        </div>
+        
+        <div class="signature">
+            <div class="signature-box">
+                <div>_________________________</div>
+                <div>国际忙碌协会主席</div>
+            </div>
+            <div class="signature-box">
+                <div>_________________________</div>
+                <div>时间管理不存在的证明人</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            证书编号: #BUSY-2025-1202 | 颁发日期: <span id="date"></span>
+        </div>
+        
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Approval_stamp.svg/1200px-Approval_stamp.svg.png" alt="批准印章" class="stamp">
+        
+        <div class="watermark">世界最忙的人认证中心</div>
+    </div>
+    
+    <script>
+        // 设置当前日期
+        const today = new Date();
+        const formattedDate = today.getFullYear() + '年' + (today.getMonth() + 1) + '月' + today.getDate() + '日';
+        document.getElementById('date').textContent = formattedDate;
+    </script>
+</body>
+</html>
